@@ -42,8 +42,18 @@ namespace array_giusti
                 {
                     array[i] = random.Next(1, 9);
                 }
-                lblrisultato.Content = "";
+                lblrisultato.Content = "[";
+                    for (i = 0;1 < array.Length; i++)
+                {
+                    lblrisultato.Content += $"{array[i]}";
+                    if (i < array.Length - 1)
+                    {
+                        lblrisultato.Content += ",";
+                    }
+                }
+                lblrisultato.Content += "]";
             }
         }
+        }
     }
-}
+
